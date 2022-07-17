@@ -1,11 +1,16 @@
 import gym
 import random
 import numpy as np
-import tflearn 
-from tflearn.layers.core import input_data, dropout, fully_connected
-from tflearn.layers.estimator import regression
+import os
+# import tflearn as tf
+# from tflearn.layers.core import input_data, dropout, fully_connected
+# from tflearn.layers.estimator import regression
 from statistics import mean, median
 from collections import Counter
+
+# os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
+# os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
+os.environ['DISPLAY'] = ':1'
 
 LR = 1e-3                       # Learning rate
 env = gym.make('CartPole-v0')
